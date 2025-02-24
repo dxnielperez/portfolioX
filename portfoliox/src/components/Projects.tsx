@@ -66,7 +66,7 @@ export function Projects() {
           className={`pb-2 md:p-4 mb-4 mx-2 md:mx-0 rounded-lg ${
             darkMode
               ? "hover:bg-[#37363c] bg-[#303034] duration-300 ease-in-out"
-              : "hover:bg-[#e5e5e5] bg-[#eeeeee] duration-300 ease-in-out"
+              : "hover:bg-[#e5e5e5] bg-[#ebebeb] duration-300 ease-in-out"
           }`}
         >
           <div className="w-full flex justify-center py-4">
