@@ -43,6 +43,7 @@ export type Project = {
   code?: string;
   description: string[];
   retweets: number;
+  tech?: string[];
   favorites: number;
 };
 
