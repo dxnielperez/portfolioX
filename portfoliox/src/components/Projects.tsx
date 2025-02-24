@@ -73,7 +73,7 @@ export function Projects() {
             <div className="flex justify-center  w-11/12 flex-col">
               <div className="pb-2">
                 <div className="flex gap-2 justify-between pr-4">
-                  <p className="font-bold mb-4 pl-3"> {project.title}</p>
+                  <p className="font-bold mb-4 pl-3">{project.title}</p>
                   <div className="flex justify-end gap-4">
                     <div className="tooltip">
                       {project.link && (
@@ -83,7 +83,7 @@ export function Projects() {
                           rel={project.id === 2 ? "" : "noopener noreferrer"}
                           aria-label={`Opens live site for project ${project.name}`}
                         >
-                          <span className="tooltiptext text-xs">View Live</span>
+                          <span className="tooltiptext text-xs">Live</span>
                           <FaLink
                             className={`self-center  mt-1   duration-150 ease-in-out ${
                               darkMode
@@ -102,7 +102,7 @@ export function Projects() {
                           rel="noopener noreferrer"
                           aria-label={`Opens link to code for project ${project.name}`}
                         >
-                          <span className="tooltiptext text-xs">View Code</span>
+                          <span className="tooltiptext text-xs">Code</span>
                           <FaCode
                             className={`self-center mt-[0.15rem] text-lg duration-150 ease-in-out ${
                               darkMode

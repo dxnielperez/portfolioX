@@ -62,17 +62,17 @@
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 80px;
-  background-color: #adadad;
+  width: 40px;
+  text-align: center;
+  background-color: orange;
   color: #fff;
   text-align: center;
   border-radius: 6px;
   padding: 2px 4px;
   position: absolute;
   z-index: 1;
-  bottom: 145%;
-  left: 140%;
-  margin-left: -60px;
+  bottom: 115%;
+  right: -50%;
   opacity: 0;
   transition: opacity 0.3s;
 }
