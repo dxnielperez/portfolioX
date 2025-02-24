@@ -131,7 +131,7 @@ export function Projects() {
                 {project.tech &&
                   project.tech.map((item) => (
                     <div
-                      className={`rounded-full text-sm text-orange/85 ${darkMode ? "bg-orange/10" : "bg-gray-400/30"} px-3 py-1`}
+                      className={`rounded-full text-sm text-orange ${darkMode ? "bg-orange/10" : "bg-orange/20"} px-3 py-1`}
                     >
                       {item}
                     </div>
