@@ -42,6 +42,7 @@ import {
   IoReturnUpBackSharp,
   IoLogoJavascript,
   IoLogoVercel,
+  IoArrowForwardOutline,
 } from "react-icons/io5";
 import { IoIosMore, IoMdClose } from "react-icons/io";
 
@@ -128,4 +129,5 @@ export {
   MdKeyboardArrowUp,
   IoMdClose,
   MdOpenInNew,
+  IoArrowForwardOutline,
 };

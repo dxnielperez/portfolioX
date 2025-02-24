@@ -29,6 +29,7 @@ export type Experiences = {
   favorites: number;
   logo?: string;
   company?: string;
+  previousRole?: string;
 };
 
 export type Project = {

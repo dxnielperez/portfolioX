@@ -1,4 +1,3 @@
-import { FaLink } from "../icons/icons";
 import { useDarkMode } from "../context/useDarkMode";
 import { education, experiences } from "../data";
 
@@ -11,57 +10,40 @@ export function Experience() {
         {experiences.map((exp, index) => (
           <div
             key={exp.id + index}
-            className={`pb-2 md:p-4 mb-4 mx-2 md:mx-0 rounded-lg ${
+            className={`py-2 md:p-4 mb-4 mx-2 md:mx-0 rounded-lg ${
               darkMode
                 ? "hover:bg-[#37363c] bg-[#303034] duration-300 ease-in-out"
                 : "hover:bg-[#e5e5e5] bg-[#eeeeee] duration-300 ease-in-out"
             }`}
           >
-            <div className="w-full flex justify-center pt-4">
-              <div className="flex w-11/12 justify-start gap-4 mb-4">
-                {exp.logo && (
-                  <div className="pl-3">
-                    <img
-                      src={exp.logo}
-                      alt={exp.name}
-                      className="w-12 h-12 object-cover rounded-lg aspect-square"
-                    />
-                  </div>
-                )}
-
-                <div className="flex">
-                  <div className="">
-                    <div className="font-bold">{exp.role}</div>
-                    <div className="font-medium text-[14px]">{exp.company}</div>
-                    <div
-                      className={`font-light text-sm mt-[1px] ${darkMode ? "text-gray-300" : "text-gray-500"}`}
-                    >
-                      {exp.date}
-                    </div>
-                  </div>
+            <div className="flex w-11/12 justify-start gap-4 mb-4">
+              {exp.logo && (
+                <div className="pl-3">
+                  <img
+                    src={exp.logo}
+                    alt={exp.name}
+                    className="w-12 h-12 min-w-[48px] min-h-[48px] object-cover rounded-lg aspect-square"
+                  />
                 </div>
+              )}
 
-                <div className="flex gap mr-12">
-                  {exp.url && (
-                    <div className="tooltip">
-                      <span className="tooltiptext text-xs">View Live</span>
-                      <a
-                        href={exp.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex self-center"
-                        aria-label="Opens link to experience item"
-                      >
-                        <FaLink
-                          className={`text-md duration-300 ease-in-out text-gray-400 ${
-                            darkMode
-                              ? "text-[#97AEC4] hover:text-[#7C9AB6]"
-                              : "text-[#7C9AB6] hover:text-[#6286A7]"
-                          } `}
-                        />
-                      </a>
-                    </div>
+              <div className="flex-1">
+                <div className="flex flex-wrap items-center">
+                  {/* {exp?.previousRole && (
+                    <div className="font-bold">{exp.previousRole}</div>
                   )}
+                  {exp.previousRole && (
+                    <IoArrowForwardOutline className="flex self-center mx-1" />
+                  )} */}
+                  <div className="font-bold">{exp.role}</div>
+                </div>
+                <div className="font-medium text-[14px]">{exp.company}</div>
+                <div
+                  className={`font-light text-sm mt-[1px] ${
+                    darkMode ? "text-gray-300" : "text-gray-500"
+                  }`}
+                >
+                  {exp.date}
                 </div>
               </div>
             </div>
