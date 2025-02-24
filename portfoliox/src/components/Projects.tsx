@@ -70,7 +70,7 @@ export function Projects() {
           }`}
         >
           <div className="w-full flex justify-center py-4">
-            <div className="flex justify-center  w-11/12 flex-col">
+            <div className="flex justify-center w-11/12 flex-col">
               <div className="pb-2">
                 <div className="flex gap-2 justify-between pr-4">
                   <p className="font-bold mb-4 pl-3">{project.title}</p>
