@@ -130,7 +130,9 @@ export function Projects() {
               <div className="flex w-full gap-4 pb-4 flex-wrap">
                 {project.tech &&
                   project.tech.map((item) => (
-                    <div className="rounded-full bg-gray-500/30 px-2 py-1">
+                    <div
+                      className={`rounded-full text-sm ${darkMode ? "bg-gray-500/30" : "bg-gray-400/30"} px-3 py-1`}
+                    >
                       {item}
                     </div>
                   ))}
