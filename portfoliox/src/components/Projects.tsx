@@ -129,9 +129,10 @@ export function Projects() {
               </div>
               <div className="flex w-full gap-4 pb-4 flex-wrap">
                 {project.tech &&
-                  project.tech.map((item) => (
+                  project.tech.map((item, index) => (
                     <div
-                      className={`rounded-full text-sm text-orange ${darkMode ? "bg-orange/10" : "bg-orange/20"} px-3 py-1`}
+                      key={item + index}
+                      className={`rounded-full text-sm  ${darkMode ? "bg-orange/10 text-orange" : "bg-orange/80 text-slate-100"} px-3 py-1`}
                     >
                       {item}
                     </div>
