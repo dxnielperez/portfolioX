@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Daniel (@dxnieldev)",
+  icons: "/favicon.png",
   description:
     "The portfolio of Daniel Perez, a full stack web developer showcasing his projects, experience, and skills in web development. Visit the About section for more information about Daniel and his journey. Links to relevant profiles are available, as well as a way to contact Daniel for collaboration or inquiries.",
 };
@@ -33,7 +34,8 @@ export default function RootLayout({
       >
         <DarkModeProvider>
           <LinksProvider>
-            {children} <Footer />
+            {children}
+            <Footer />
             <TsParticles />
           </LinksProvider>
         </DarkModeProvider>

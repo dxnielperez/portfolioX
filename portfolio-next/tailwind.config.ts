@@ -23,8 +23,13 @@ export default {
         "slide-left": "slideInLeft 0.5s forwards",
         "slide-up": "slideUp 0.5s forwards",
         "slide-down": "slideUp 0.5s forwards",
+        float: "float 5s ease-in-out infinite",
       },
       keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
         slideInRight: {
           from: {
             transform: "translateX(100%)",

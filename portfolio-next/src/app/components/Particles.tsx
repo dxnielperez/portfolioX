@@ -22,6 +22,7 @@ export default function TsParticles() {
     });
   }, []);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const particlesLoaded = async (container?: Container): Promise<void> => {};
 
   const options: ISourceOptions = useMemo(
@@ -97,11 +98,13 @@ export default function TsParticles() {
 
   if (init) {
     return (
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
+      <div className="z-[1]">
+        <Particles
+          id="tsparticles"
+          particlesLoaded={particlesLoaded}
+          options={options}
+        />
+      </div>
     );
   }
 

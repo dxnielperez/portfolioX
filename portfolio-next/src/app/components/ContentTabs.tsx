@@ -1,9 +1,9 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useDarkMode } from "../context/useDarkMode";
 import { tabs, Tab } from "../data";
-import { NotFoundPage } from "./NotFound";
+import ErrorPage from "./Error";
 
 export function ContentTabs() {
   const searchParams = useSearchParams();
@@ -62,7 +62,7 @@ export function ContentTabs() {
         ))
       ) : (
         <div className="w-full">
-          <NotFoundPage />
+          <ErrorPage />
         </div>
       )}
     </div>

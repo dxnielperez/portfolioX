@@ -2,18 +2,18 @@
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import Image from "next/image";
 import { useDarkMode } from "../context";
+import Link from "next/link";
 
-export function Nav() {
+export function Nav({ is404 = false }) {
   const { darkMode, toggleDarkMode } = useDarkMode();
 
   return (
     <div
       className={`flex w-full justify-between items-center px-4 py-2 transition duration-300 
-     backdrop-blur-md
+     backdrop-blur-md z-50
    ${darkMode ? "bg-dark/75" : "bg-light/45"}`}
     >
-      {" "}
-      <div onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+      <Link href="/">
         <Image
           src="/orange-icon.png"
           alt="my logo"
@@ -21,14 +21,16 @@ export function Nav() {
           height={35}
           className="hover:scale-105 duration-300 ease-in-out cursor-pointer"
         />
-      </div>
-      <DarkModeSwitch
-        checked={darkMode}
-        onChange={toggleDarkMode}
-        moonColor="white"
-        sunColor="orange"
-        size={30}
-      />
+      </Link>
+      {!is404 && (
+        <DarkModeSwitch
+          checked={darkMode}
+          onChange={toggleDarkMode}
+          moonColor="white"
+          sunColor="orange"
+          size={30}
+        />
+      )}
     </div>
   );
 }

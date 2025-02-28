@@ -20,7 +20,7 @@ export function Footer() {
           href="https://www.linkedin.com/in/daniel-f-perez/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:scale-110 duration-300 ease-in-out cursor-pointer"
+          className="hover:scale-110 duration-300 ease-in-out cursor-pointer z-50"
         >
           <FaLinkedin />
         </a>
@@ -29,7 +29,7 @@ export function Footer() {
           href="https://github.com/dxnielperez"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:scale-110 duration-300 ease-in-out cursor-pointer"
+          className="hover:scale-110 duration-300 ease-in-out cursor-pointer z-50"
         >
           <FaGithub />
         </a>
@@ -38,7 +38,7 @@ export function Footer() {
           href="mailto:danielperezf98@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:scale-110 duration-300 ease-in-out cursor-pointer"
+          className="hover:scale-110 duration-300 ease-in-out cursor-pointer z-50"
         >
           <SiMinutemailer />
         </a>

@@ -55,7 +55,7 @@ export default function Home() {
   return (
     <>
       <div
-        className={`${darkMode ? "bg-dark" : "bg-light"} min-h-screen relative`}
+        className={`${darkMode ? "bg-dark" : "bg-light"} min-h-screen relative `}
       >
         <div className="relative z-10">
           <div className="sticky top-0 z-30 w-full">
