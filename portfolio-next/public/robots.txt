@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.dxniel.dev/
+
+# Sitemaps
+Sitemap: https://www.dxniel.dev/sitemap.xml
