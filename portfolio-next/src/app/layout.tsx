@@ -43,6 +43,11 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="theme-color" content="#FB904D" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
         <link rel="canonical" href="https://www.dxniel.dev/" />
       </head>
       <body

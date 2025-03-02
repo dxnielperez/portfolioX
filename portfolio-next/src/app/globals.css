@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  background-color: #FB904D;
+}
+
 ::selection {
     background: #FB904D; 
     color: white;        
