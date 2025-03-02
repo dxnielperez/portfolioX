@@ -4,6 +4,7 @@ import "./globals.css";
 import { DarkModeProvider, LinksProvider } from "./context";
 import { Footer } from "./components/Footer";
 import TsParticles from "./components/Particles";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -61,6 +62,7 @@ export default function RootLayout({
         <DarkModeProvider>
           <LinksProvider>
             {children}
+            <Analytics />
             <Footer />
             <TsParticles />
           </LinksProvider>

@@ -13,6 +13,7 @@
     "@emailjs/browser": "^4.4.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.8.1",
+    "@vercel/analytics": "^1.5.0",
     "next": "15.1.7",
     "next-sitemap": "^4.2.3",
     "react": "^19.0.0",
