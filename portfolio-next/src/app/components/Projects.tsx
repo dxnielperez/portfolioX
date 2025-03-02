@@ -60,6 +60,13 @@ export function Projects() {
     onSwipedRight: prevImage,
   });
 
+  useEffect(() => {
+    if (modalOpen && selectedProject) {
+      const img = new window.Image(); // Explicitly use the browser's Image object
+      img.src = selectedProject.images[selectedImageIndex];
+    }
+  }, [modalOpen, selectedProject, selectedImageIndex]);
+
   return (
     <div className="h-full">
       {projects.map((project, projectIndex) => (
