@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useDarkMode } from "../context/useDarkMode";
 import { links, Links } from "../data";
 import { IoMdClose, MdOpenInNew } from "../icons/icons";
@@ -61,7 +62,9 @@ export function LinkPfp() {
   const { darkMode } = useDarkMode();
   return (
     <div className="w-full">
-      <img
+      <Image
+        width={128}
+        height={128}
         src="/yusuke.jpeg"
         alt=""
         className={`rounded-full h-32 w-32 object-cover bg-white m-4  ring-2 ${darkMode ? "ring-light" : "ring-dark"}`}

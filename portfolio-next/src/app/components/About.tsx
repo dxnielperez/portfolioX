@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useDarkMode } from "../context/useDarkMode";
 import { IoMdArrowBack, IoMdArrowForward, IoMdClose } from "../icons/icons";
 import { useSwipeable } from "react-swipeable";
+import Image from "next/image";
 
 export function About() {
   const { darkMode } = useDarkMode();
@@ -63,9 +64,8 @@ export function About() {
                 darkMode ? "" : "outline-gray-200"
               }  rounded-2xl  mb-4`}
             >
-              {" "}
               <p className="pt-4 pb-6">
-                Hi! I'm Daniel, a full stack developer driven by a lifelong
+                Hi! I&apos;m Daniel, a full stack developer driven by a lifelong
                 curiosity about technology and how things work. This early
                 fascination eventually led me to explore coding, where I found a
                 powerful outlet for creativity and problem solving.
@@ -73,13 +73,13 @@ export function About() {
                 <br />
                 After completing an intensive full stack development program at
                 LearningFuze, I discovered a true passion for web development
-                and design. Now, as a developer, I'm constantly expanding my
-                skills and exploring new ways to innovate.
+                and design. Now, as a developer, I&apos;m constantly expanding
+                my skills and exploring new ways to innovate.
                 <br />
                 <br />
-                I'm always open to new collaborations and growth opportunities
-                in the tech industry. If you have exciting projects or potential
-                partnerships in mind, let's connect!
+                I&apos;m always open to new collaborations and growth
+                opportunities in the tech industry. If you have exciting
+                projects or potential partnerships in mind, let&apos;s connect!
               </p>
               <div
                 className={`flex overflow-hidden rounded-2xl mb-6  ${
@@ -89,8 +89,10 @@ export function About() {
                 <div className="flex gap-1">
                   {images.map((image, index) => (
                     <div key={index} className="w-full relative">
-                      <img
+                      <Image
                         loading="lazy"
+                        width={800}
+                        height={800}
                         src={image}
                         className="w-full aspect-[7/8] object-cover cursor-pointer rounded-lg"
                         alt="images of me and my cohort from learningfuze"
@@ -126,8 +128,10 @@ export function About() {
                       />
                       <div className="w-full flex justify-center">
                         {" "}
-                        <img
+                        <Image
                           loading="lazy"
+                          height={800}
+                          width={800}
                           src={images[selectedImageIndex]}
                           className=" max-w-[420px] sm:max-w-[520px] md:max-w-[620px] lg:max-w-[720px] max-h-[90vh]"
                           alt="images of me and my cohort from learningfuze"

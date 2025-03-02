@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useDarkMode } from "../context/useDarkMode";
 import { education, experiences } from "../data";
 
@@ -20,7 +21,9 @@ export function Experience() {
             <div className="flex w-11/12 justify-start gap-4 mb-4 pt-4">
               {exp.logo && (
                 <div className="pl-3">
-                  <img
+                  <Image
+                    width={48}
+                    height={48}
                     src={exp.logo}
                     alt={exp.name}
                     className="w-12 h-12 min-w-[48px] min-h-[48px] object-cover rounded-lg aspect-square"
@@ -78,11 +81,13 @@ export function Experience() {
                 : "hover:bg-[#EBEBEB] bg-[#eeeeee] duration-300 ease-in-out"
             }`}
           >
-            <div className="w-full flex justify-center pt-4">
+            <div className="w-full flex  pt-4">
               <div className="flex w-11/12 justify-start gap-4 mb-4">
                 {edu.logo && (
                   <div className="pl-3">
-                    <img
+                    <Image
+                      width={48}
+                      height={48}
                       src={edu.logo}
                       alt={edu.name}
                       className="min-w-min h-12 object-cover rounded-lg aspect-square"

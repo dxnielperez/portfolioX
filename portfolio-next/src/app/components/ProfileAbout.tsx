@@ -45,14 +45,14 @@ export function ProfileAbout() {
     toggleLinks();
   };
 
-  const getButtonPosition = () => {
-    if (buttonRef.current) {
-      const buttonRect = buttonRef.current.getBoundingClientRect();
-      const offset = 40;
-      return { top: buttonRect.top, left: buttonRect.left + offset };
-    }
-    return { top: 0, left: 0 };
-  };
+  // const getButtonPosition = () => {
+  //   if (buttonRef.current) {
+  //     const buttonRect = buttonRef.current.getBoundingClientRect();
+  //     const offset = 40;
+  //     return { top: buttonRect.top, left: buttonRect.left + offset };
+  //   }
+  //   return { top: 0, left: 0 };
+  // };
 
   useEffect(() => {
     if (isDirectMessageVisible) {

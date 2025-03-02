@@ -17,8 +17,8 @@ export function Nav({ is404 = false }) {
         <Image
           src="/orange-icon.png"
           alt="my logo"
-          width={35}
-          height={35}
+          width={32}
+          height={32}
           className="hover:scale-105 duration-300 ease-in-out cursor-pointer"
         />
       </Link>

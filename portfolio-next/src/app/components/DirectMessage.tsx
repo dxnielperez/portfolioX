@@ -1,9 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { useDarkMode } from "../context/useDarkMode";
 import { Message } from "../data";
 import emailjs from "@emailjs/browser";
 import { FaPaperPlane, IoMdClose } from "../icons/icons";
+import Image from "next/image";
 
 export function DirectMessage({ onClose }: { onClose: () => void }) {
   const { darkMode } = useDarkMode();
@@ -33,7 +35,7 @@ export function DirectMessage({ onClose }: { onClose: () => void }) {
     const mockReplies = [
       `Hey ${name}, thanks for reaching out! I'll get back to you by email shortly.`,
       `Hi ${name}, I appreciate your message! You'll hear from me soon via email.`,
-      `${name}, thanks for your inquiry. I'll respond to you as soon as possible via email.`,
+      `Hey ${name}, thanks for your inquiry. I'll respond to you as soon as possible via email.`,
       `Hello ${name}! I've received your message and will follow up soon.`,
     ];
 
@@ -99,13 +101,15 @@ export function DirectMessage({ onClose }: { onClose: () => void }) {
               darkMode ? "text-gray-400" : "text-gray-500"
             }`}
           >
-            <img
+            <Image
+              width={500}
+              height={500}
               src="/memoji4.png"
               alt="my memoji"
               className={`rounded-full h-14 w-14 object-cover bg-white my-4 `}
             />
             <p>@dxnieldev</p>
-            <p className="p">Joined March 2024</p>
+            {/* <p className="p">Joined March 2024</p> */}
           </div>
 
           <div

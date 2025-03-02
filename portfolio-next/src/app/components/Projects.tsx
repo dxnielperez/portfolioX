@@ -12,6 +12,7 @@ import {
 } from "../icons/icons";
 
 import { useSwipeable } from "react-swipeable";
+import Image from "next/image";
 
 export function Projects() {
   const { darkMode } = useDarkMode();
@@ -147,7 +148,9 @@ export function Projects() {
                 <div className="grid grid-cols-2 w-full gap-1">
                   {project.images.map((image, imageIndex) => (
                     <div key={imageIndex} className="relative">
-                      <img
+                      <Image
+                        width={400}
+                        height={400}
                         src={image}
                         className="object-cover cursor-pointer aspect-[2/1] overflow-hidden"
                         alt={`${project.title} project images`}
@@ -189,7 +192,9 @@ export function Projects() {
             </div>
             <div className="w-full flex justify-center">
               {" "}
-              <img
+              <Image
+                width={800}
+                height={800}
                 loading="lazy"
                 src={projects[selectedProjectIndex].images[selectedImageIndex]}
                 className=" max-w-[420px] sm:max-w-[520px] md:max-w-[620px] lg:max-w-[720px] max-h-[90vh]"
