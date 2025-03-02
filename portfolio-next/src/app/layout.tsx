@@ -19,7 +19,19 @@ export const metadata: Metadata = {
   title: "Daniel (@dxnieldev)",
   icons: "/favicon.png",
   description:
-    "The portfolio of Daniel Perez, a full stack web developer showcasing his projects, experience, and skills in web development. Visit the About section for more information about Daniel and his journey. Links to relevant profiles are available, as well as a way to contact Daniel for collaboration or inquiries.",
+    "Hey everyone, I'm Daniel Perez, a full stack web developer! Welcome to my portfolio website, where I showcase my projects, experience, and skills in web development. Check out the About section to learn more about my journey, and feel free to reach out for collaborations or inquiries through the available links.",
+  keywords: [
+    "Daniel Perez",
+    "Full Stack Developer",
+    "Web Developer",
+    "React Developer",
+    "Portfolio",
+    "JavaScript",
+    "TypeScript",
+    "NextJs",
+    "Frontend Developer",
+    "Freelance Web Developer",
+  ],
 };
 
 export default function RootLayout({
