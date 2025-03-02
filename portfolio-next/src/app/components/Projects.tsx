@@ -195,6 +195,7 @@ export function Projects() {
               <Image
                 width={800}
                 height={800}
+                priority={true}
                 src={projects[selectedProjectIndex].images[selectedImageIndex]}
                 className=" max-w-[420px] sm:max-w-[520px] md:max-w-[620px] lg:max-w-[720px] max-h-[90vh]"
                 alt={`${selectedProject?.title} project images in modal`}
