@@ -13,6 +13,7 @@ export function Banner({ darkModeImage, lightModeImage }: BannerProps) {
           width={500}
           height={500}
           src={lightModeImage}
+          unoptimized={true}
           alt="light mode banner"
           className={`absolute inset-0 object-cover w-full h-full transition-opacity duration-300 rounded-none lg:rounded-lg ${
             darkMode ? "opacity-0" : "opacity-100"
@@ -22,6 +23,7 @@ export function Banner({ darkModeImage, lightModeImage }: BannerProps) {
           width={500}
           height={500}
           src={darkModeImage}
+          unoptimized={true}
           alt="dark mode banner"
           className={`absolute inset-0 object-cover w-full h-full transition-opacity duration-300 rounded-none lg:rounded-lg ${
             darkMode ? "opacity-100" : "opacity-0"
