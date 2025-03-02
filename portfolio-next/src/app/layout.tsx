@@ -42,6 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="theme-color" content="#FB904D" />
         <link rel="canonical" href="https://www.dxniel.dev/" />
       </head>
       <body
