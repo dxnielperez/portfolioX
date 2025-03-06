@@ -133,7 +133,7 @@ export function About() {
                           height={800}
                           width={800}
                           src={images[selectedImageIndex]}
-                          className=" max-w-[420px] sm:max-w-[520px] md:max-w-[620px] lg:max-w-[720px] max-h-[90vh]"
+                          className=" max-w-[420px] sm:max-w-[520px] md:max-w-[620px] lg:max-w-[720px] max-h-[90vh] object-cover"
                           alt="images of me and my cohort from learningfuze"
                           onClick={(e) => e.stopPropagation()}
                           {...swipeHandlers}

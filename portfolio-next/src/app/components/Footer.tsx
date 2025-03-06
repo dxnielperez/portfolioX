@@ -6,7 +6,7 @@ export function Footer() {
   const { darkMode } = useDarkMode();
   return (
     <div
-      className={`w-full pt-20 flex-col gap-4 select-none ${
+      className={`w-full pt-20 flex-col gap-4 z-[9] select-none ${
         darkMode ? "bg-dark" : "bg-light"
       } flex items-center h-[200px]`}
     >
@@ -20,7 +20,7 @@ export function Footer() {
           href="https://www.linkedin.com/in/daniel-f-perez/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:scale-110 duration-300 ease-in-out cursor-pointer z-50"
+          className="hover:scale-110 duration-300 ease-in-out cursor-pointer z-[9]"
         >
           <FaLinkedin />
         </a>
@@ -29,7 +29,7 @@ export function Footer() {
           href="https://github.com/dxnielperez"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:scale-110 duration-300 ease-in-out cursor-pointer z-50"
+          className="hover:scale-110 duration-300 ease-in-out cursor-pointer z-[9]"
         >
           <FaGithub />
         </a>
@@ -38,7 +38,7 @@ export function Footer() {
           href="mailto:danielperezf98@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:scale-110 duration-300 ease-in-out cursor-pointer z-50"
+          className="hover:scale-110 duration-300 ease-in-out cursor-pointer z-[9]"
         >
           <SiMinutemailer />
         </a>
