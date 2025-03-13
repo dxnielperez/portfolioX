@@ -209,39 +209,38 @@ export const education: Education[] = [
 //     tech: [
 //       {
 //         name: "HTML",
-//         icon: <FaHtml5 className="text-[#E44D26] text-6xl md:text-7xl" />,
+//         icon: "FaHtml5",
+//         classname: "text-[#E44D26] text-6xl md:text-7xl",
 //       },
 //       {
 //         name: "CSS",
-//         icon: <FaCss3Alt className="text-[#1572B6] text-6xl md:text-7xl" />,
+//         icon: "FaCss3Alt",
+//         classname: "text-[#1572B6] text-6xl md:text-7xl",
 //       },
 //       {
 //         name: "Tailwind CSS",
-//         icon: (
-//           <SiTailwindcss className="text-[#38BDF8] text-6xl md:text-7xl" />
-//         ),
+//         icon: "SiTailwindcss",
+//         classname: "text-[#38BDF8] text-6xl md:text-7xl",
 //       },
 //       {
 //         name: "JavaScript",
-//         icon: (
-//           <IoLogoJavascript className="text-[#F7DF1E] text-6xl md:text-7xl" />
-//         ),
+//         icon: "IoLogoJavascript",
+//         classname: "text-[#F7DF1E] text-6xl md:text-7xl",
 //       },
 //       {
 //         name: "TypeScript",
-//         icon: (
-//           <SiTypescript className="text-[#3178C6] text-6xl md:text-7xl" />
-//         ),
+//         icon: "SiTypescript",
+//         classname: "text-[#3178C6] text-6xl md:text-7xl",
 //       },
 //       {
 //         name: "React",
-//         icon: <FaReact className="text-[#61DAFB] text-6xl md:text-7xl" />,
+//         icon: "FaReact",
+//         classname: "text-[#61DAFB] text-6xl md:text-7xl",
 //       },
 //       {
 //         name: "Next.js",
-//         icon: (
-//           <TbBrandNextjs className="text-[#000000] text-6xl md:text-7xl" />
-//         ),
+//         icon: "TbBrandNextjs",
+//         classname: "text-[#000000] text-6xl md:text-7xl",
 //       },
 //     ],
 //   },
@@ -253,21 +252,23 @@ export const education: Education[] = [
 //     tech: [
 //       {
 //         name: "Node.js",
-//         icon: <FaNodeJs className="text-[#8CC84B] text-6xl md:text-7xl" />,
+//         icon: "FaNodeJs",
+//         classname: "text-[#8CC84B] text-6xl md:text-7xl",
 //       },
 //       {
 //         name: "Express",
-//         icon: <SiExpress className="text-[#000000] text-6xl md:text-7xl" />,
+//         icon: "SiExpress",
+//         classname: "text-[#000000] text-6xl md:text-7xl",
 //       },
 //       {
 //         name: "PostgreSQL",
-//         icon: (
-//           <BiLogoPostgresql className="text-[#336791] text-6xl md:text-7xl" />
-//         ),
+//         icon: "BiLogoPostgresql",
+//         classname: "text-[#336791] text-6xl md:text-7xl",
 //       },
 //       {
 //         name: "MongoDB",
-//         icon: <SiMongodb className="text-[#47A248] text-6xl md:text-7xl" />,
+//         icon: "SiMongodb",
+//         classname: "text-[#47A248] text-6xl md:text-7xl",
 //       },
 //     ],
 //   },
@@ -279,21 +280,23 @@ export const education: Education[] = [
 //     tech: [
 //       {
 //         name: "AWS",
-//         icon: <FaAws className="text-[#FF9900] text-6xl md:text-7xl" />,
+//         icon: "FaAws",
+//         classname: "text-[#FF9900] text-6xl md:text-7xl",
 //       },
 //       {
 //         name: "Vercel",
-//         icon: (
-//           <IoLogoVercel className="text-[#000000] text-6xl md:text-7xl" />
-//         ),
+//         icon: "IoLogoVercel",
+//         classname: "text-[#000000] text-6xl md:text-7xl",
 //       },
 //       {
 //         name: "Docker",
-//         icon: <FaDocker className="text-[#2496ED] text-6xl md:text-7xl" />,
+//         icon: "FaDocker",
+//         classname: "text-[#2496ED] text-6xl md:text-7xl",
 //       },
 //       {
 //         name: "GitHub",
-//         icon: <FaGithub className="text-[#181717] text-6xl md:text-7xl" />,
+//         icon: "FaGithub",
+//         classname: "text-[#181717] text-6xl md:text-7xl",
 //       },
 //     ],
 //   },
@@ -305,27 +308,28 @@ export const education: Education[] = [
 //     tech: [
 //       {
 //         name: "VS Code",
-//         icon: (
-//           <BiLogoVisualStudio className="text-[#007ACC] text-6xl md:text-7xl" />
-//         ),
+//         icon: "BiLogoVisualStudio",
+//         classname: "text-[#007ACC] text-6xl md:text-7xl",
 //       },
 //       {
 //         name: "Git",
-//         icon: (
-//           <IoMdGitMerge className="text-[#F1502F] text-6xl md:text-7xl" />
-//         ),
+//         icon: "IoMdGitMerge",
+//         classname: "text-[#F1502F] text-6xl md:text-7xl",
 //       },
 //       {
 //         name: "NPM",
-//         icon: <FaNpm className="text-[#CB3837] text-6xl md:text-7xl" />,
+//         icon: "FaNpm",
+//         classname: "text-[#CB3837] text-6xl md:text-7xl",
 //       },
 //       {
 //         name: "Slack",
-//         icon: <FaSlack className="text-[#4A154B] text-6xl md:text-7xl" />,
+//         icon: "FaSlack",
+//         classname: "text-[#4A154B] text-6xl md:text-7xl",
 //       },
 //       {
 //         name: "Jira",
-//         icon: <SiJira className="text-[#0052CC] text-6xl md:text-7xl" />,
+//         icon: "SiJira",
+//         classname: "text-[#0052CC] text-6xl md:text-7xl",
 //       },
 //     ],
 //   },

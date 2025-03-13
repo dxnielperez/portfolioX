@@ -5,6 +5,7 @@ import { DarkModeProvider, LinksProvider } from "./context";
 import { Footer } from "./components/Footer";
 import TsParticles from "./components/Particles";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -55,6 +56,24 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-7TSWK844WQ"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-7TSWK844WQ');
+            `,
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
