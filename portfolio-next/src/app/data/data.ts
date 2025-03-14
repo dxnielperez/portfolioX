@@ -172,9 +172,9 @@ export const links: Links[] = [
   {
     id: 3,
     name: "Email",
-    url: "mailto:danielperezf98@gmail.com",
+    url: "mailto:dxnieldev@gmail.com",
     icon: MdOutlineMailOutline,
-    copy: "danielperezf98@gmail.com",
+    copy: "dxnieldev@gmail.com",
   },
   {
     id: 4,

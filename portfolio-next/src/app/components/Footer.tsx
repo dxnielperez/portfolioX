@@ -34,8 +34,8 @@ export function Footer() {
           <FaGithub />
         </a>
         <a
-          aria-label="Opens email to Daniel Perez's email at danielperezf98@gmail.com"
-          href="mailto:danielperezf98@gmail.com"
+          aria-label="Opens email to Daniel Perez's email at dxnieldev@gmail.com"
+          href="mailto:dxnieldev@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:scale-110 duration-300 ease-in-out cursor-pointer z-[9]"
