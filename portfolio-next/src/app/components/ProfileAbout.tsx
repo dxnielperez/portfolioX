@@ -1,7 +1,6 @@
 "use client";
 import { useDarkMode } from "../context/useDarkMode";
 import { useEffect, useRef, useState } from "react";
-// import ConfettiExplosion from "react-confetti-explosion";
 import {
   BsFillSuitcaseLgFill,
   FaLink,
@@ -14,7 +13,6 @@ import { useLinksContext } from "../context/LinksContext";
 
 export function ProfileAbout() {
   const { darkMode } = useDarkMode();
-  // const [confettiActive, setConfettiActive] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const [showDirectMessage, setShowDirectMessage] = useState(false);
   const { showLinks, toggleLinks } = useLinksContext();
@@ -36,23 +34,11 @@ export function ProfileAbout() {
     setFollowers(newFollowers);
     sessionStorage.setItem("following", JSON.stringify(!following));
     sessionStorage.setItem("followers", JSON.stringify(newFollowers));
-    // if (following) {
-    //   setTimeout(() => setConfettiActive(true), 400);
-    // }
   };
 
   const handleLinksClick = () => {
     toggleLinks();
   };
-
-  // const getButtonPosition = () => {
-  //   if (buttonRef.current) {
-  //     const buttonRect = buttonRef.current.getBoundingClientRect();
-  //     const offset = 40;
-  //     return { top: buttonRect.top, left: buttonRect.left + offset };
-  //   }
-  //   return { top: 0, left: 0 };
-  // };
 
   useEffect(() => {
     if (isDirectMessageVisible) {
@@ -96,29 +82,6 @@ export function ProfileAbout() {
             {following ? "Follow" : "Following"}
           </button>
         </div>
-        {/* {confettiActive && (
-          <ConfettiExplosion
-            force={0.05}
-            duration={2200}
-            particleCount={20}
-            zIndex={10}
-            width={200}
-            colors={[
-              "#FB904D",
-              "#c084fc",
-              "#F5CF43",
-              "#50CBC8",
-              "#60a5fa",
-              "#ffff",
-            ]}
-            onComplete={() => setConfettiActive(false)}
-            style={{
-              position: "absolute",
-              top: getButtonPosition().top,
-              left: getButtonPosition().left,
-            }}
-          />
-        )} */}
         <div className="px-4">
           <div className="text-2xl font-bold flex items-center gap-2">
             <h3>Daniel Perez</h3>
@@ -157,14 +120,6 @@ export function ProfileAbout() {
                 /links
               </p>
             </div>
-            {/* <div className="flex gap-1">
-              <HiMiniCake className="self-center" />
-              October 21st
-            </div>
-            <div className="flex gap-1">
-              <IoCalendarOutline className="self-center" />
-              Joined March 2024
-            </div> */}
           </div>
           <div className="flex w-[200px] justify-between pt-2">
             <div className="flex justify-between w-[35%]">

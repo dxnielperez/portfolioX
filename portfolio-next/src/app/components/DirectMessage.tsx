@@ -35,8 +35,8 @@ export function DirectMessage({ onClose }: { onClose: () => void }) {
     const mockReplies = [
       `Hey ${name}, thanks for reaching out! I'll get back to you by email shortly.`,
       `Hi ${name}, I appreciate your message! You'll hear from me soon via email.`,
-      `Hey ${name}, thanks for your inquiry. I'll respond to you as soon as possible via email.`,
-      `Hello ${name}! I've received your message and will follow up soon.`,
+      `Hey ${name}, thanks for your message. I'll respond to you as soon as possible via email.`,
+      `Hello ${name}, I've received your message and will follow up soon, thanks!`,
     ];
 
     const randomReply =
@@ -104,7 +104,7 @@ export function DirectMessage({ onClose }: { onClose: () => void }) {
             <Image
               width={500}
               height={500}
-              src="/memoji4.png"
+              src="/me-memoji.png"
               alt="my memoji"
               className={`rounded-full h-14 w-14 object-cover bg-white my-4 `}
             />
@@ -144,7 +144,7 @@ export function DirectMessage({ onClose }: { onClose: () => void }) {
                   darkMode ? "text-[#a0a0a5]" : "text-[#909095]"
                 }`}
               >
-                All messages will be sent by email. Thank you.
+                Messages will be sent by email
               </div>
             )}
             <div ref={messagesEndRef}></div>
