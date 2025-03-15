@@ -110,7 +110,7 @@ export const projects: Project[] = [
     ],
     title: "Studio Ghibli Wiki, Front End",
     link: "https://dxnielperez.github.io/ghibli-wiki/",
-    code: "hhttps://dxnielperez.github.io/ghibli-wiki/",
+    code: "https://github.com/dxnielperez/ghibli-wiki",
     tech: ["reactjs", "typescript", "tailwindcss"],
     description: [
       "Utilized React, TypeScript, Tailwind and GH-Pages to build a responsive and intuitive front-end design.",
