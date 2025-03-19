@@ -7,7 +7,6 @@ import {
   FaNodeJs,
   FaAws,
   FaGithub,
-  // FaFigma,
   FaDocker,
   FaNpm,
   FaSlack,
