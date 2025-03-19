@@ -98,7 +98,7 @@ export const projects: Project[] = [
       "/portfolio/portfolio-v2-4.png",
     ],
     title: "Personal Portfolio",
-    tech: ["reactjs", "typescript", "tailwindcss", "vercel"],
+    tech: ["react", "typescript", "tailwindcss", "vercel"],
     link: "/",
     code: "https://github.com/dxnielperez/portfolioX",
     description: [
@@ -124,7 +124,7 @@ export const projects: Project[] = [
     title: "Studio Ghibli Wiki",
     link: "https://dxnielperez.github.io/ghibli-wiki/",
     code: "https://github.com/dxnielperez/ghibli-wiki",
-    tech: ["reactjs", "typescript", "tailwindcss"],
+    tech: ["react", "typescript", "tailwindcss"],
     description: [
       "Utilized React, TypeScript, Tailwind and GH-Pages to build a responsive and intuitive front-end design.",
       "Engineered a display of Studio Ghibli films from a public API and implemented Fetch to display results.",
@@ -147,7 +147,15 @@ export const projects: Project[] = [
       "/spin-trade/spin-trade-4.png",
     ],
     title: "Spin Trade Marketplace",
-    tech: ["reactjs", "typescript", "tailwindcss", "postgresql", "aws"],
+    tech: [
+      "react",
+      "typescript",
+      "tailwindcss",
+      "node",
+      "express",
+      "postgresql",
+      "aws",
+    ],
     code: "https://github.com/dxnielperez/record-marketplace",
     description: [
       "Utilized React, TypeScript, Tailwind, Node.js, Express, PostgreSQL and AWS to build a full stack web application.",
@@ -212,6 +220,7 @@ export const monthNames = [
   "November",
   "December",
 ];
+
 // export const tech = [
 //   {
 //     name: "Daniel Perez",
