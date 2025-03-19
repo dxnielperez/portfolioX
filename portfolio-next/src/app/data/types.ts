@@ -19,7 +19,6 @@ export type Experiences = {
   id: number;
   name: string;
   username: string;
-  date: string;
   pfp: string;
   url?: string;
   code?: string;
@@ -31,6 +30,12 @@ export type Experiences = {
   logo?: string;
   company?: string;
   previousRole?: string;
+  duration?: string;
+  start?: {
+    month: number;
+    year: number;
+  };
+  end?: { month: number; year?: number };
 };
 
 export type Project = {

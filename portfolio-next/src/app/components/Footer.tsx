@@ -4,6 +4,8 @@ import { FaGithub, FaLinkedin, SiMinutemailer } from "../icons/icons";
 
 export function Footer() {
   const { darkMode } = useDarkMode();
+  const currentYear = new Date().getFullYear();
+
   return (
     <div
       className={`w-full pt-20 flex-col gap-4 z-[9] select-none ${
@@ -48,7 +50,7 @@ export function Footer() {
           darkMode ? "text-gray-300" : "text-gray-500"
         } font-light text-xs bg-[#ADAAB1]/10 p-2 rounded-md backdrop-blur-md `}
       >
-        dxniel © 2025
+        {`dxniel © ${currentYear}`}
       </span>
     </div>
   );

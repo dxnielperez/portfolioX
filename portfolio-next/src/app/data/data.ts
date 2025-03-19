@@ -16,10 +16,9 @@ export const experiences: Experiences[] = [
     pfp: "./memoji4.png",
     name: "Daniel Perez",
     username: "dxnieldev",
-    date: "May 2024 - Present",
-    // previousRole: "Jr Web Developer",
     role: "Associate Software Engineer",
     company: "The Daily Wire - Full Time",
+    start: { month: 5, year: 2024 },
     location: "Remote",
     logo: "/dw-logo.jpg",
     description: [
@@ -35,17 +34,18 @@ export const experiences: Experiences[] = [
     pfp: "./memoji4.png",
     name: "Daniel Perez",
     username: "dxnieldev",
-    date: "March 2024 - May 2024",
     role: "Coding Bootcamp TA",
     company: "LearningFuze - Part Time",
-    logo: "/lfz-logo.png",
+    start: { month: 3, year: 2024 },
+    end: { month: 5, year: 2024 },
+    duration: "3 Mos",
     location: "Irvine, CA",
+    logo: "/lfz-logo.png",
     description: [
       "Supported students in comprehending application solutions, emphasizing key technologies such as HTML, CSS, JavaScript, TypeScript, React, and PostgreSQL.",
       "Assisted students in troubleshooting coding errors, utilizing research, documentation, and code reviews to find solutions.",
       "Collaborated with instructors to enhance curriculum and improve student performance.",
     ],
-
     retweets: 2,
     favorites: 4,
   },
@@ -54,20 +54,33 @@ export const experiences: Experiences[] = [
     pfp: "./memoji4.png",
     name: "Daniel Perez",
     username: "dxnieldev",
-    date: "February 2024 - Present",
     role: "Web Developer",
     company: "Self - Freelance",
-    logo: "/laptop.jpg",
+    start: { month: 2, year: 2024 },
     location: "Remote",
+    logo: "/laptop.jpg",
     description: [
       "Designed and developed websites using modern design principles and user experience techniques, incorporating technologies like React/Next.js, MongoDB, Tailwind CSS, etc.",
       "Incorporated existing online ordering system for delivery and pickup, increasing customer convenience and sales.",
       "Collaborated with clients and teams to brainstorm ideas and deliver creative solutions.",
-      // "Managed multiple projects simultaneously, ensuring timely delivery and client satisfaction.",
     ],
-
     retweets: 3,
     favorites: 7,
+  },
+];
+
+export const education: Education[] = [
+  {
+    id: 1,
+    name: "LearningFuze",
+    logo: "/lfz-logo.png",
+    program: "Full Immersion Web Development Program (Full Stack)",
+    date: "August 2023 - January 2024",
+    description: [
+      "Programmed 10-12 hours/day for 18 weeks (800+ hours) in an Agile environment",
+      "Participated in hackathons to build apps and improve pair programming skills.",
+      "Assisted classmates with troubleshooting and debugging personal projects.",
+    ],
   },
 ];
 
@@ -103,10 +116,10 @@ export const projects: Project[] = [
     date: "January 12, 2024",
     pfp: "/memoji4.png",
     images: [
-      "/ghibli-wiki/ghibli-wiki-1.png",
-      "/ghibli-wiki/ghibli-wiki-2.png",
-      "/ghibli-wiki/ghibli-wiki-3.png",
-      "/ghibli-wiki/ghibli-wiki-4.png",
+      "/ghibli-wiki/ghibli-1.png",
+      "/ghibli-wiki/ghibli-2.png",
+      "/ghibli-wiki/ghibli-3.png",
+      "/ghibli-wiki/ghibli-4.png",
     ],
     title: "Studio Ghibli Wiki, Front End",
     link: "https://dxnielperez.github.io/ghibli-wiki/",
@@ -185,21 +198,20 @@ export const links: Links[] = [
   },
 ];
 
-export const education: Education[] = [
-  {
-    id: 1,
-    name: "LearningFuze",
-    logo: "/lfz-logo.png",
-    program: "Full Immersion Web Development Program (Full Stack)",
-    date: "August 2023 - January 2024",
-    description: [
-      "Programmed 10-12 hours/day for 18 weeks (800+ hours) in an Agile environment",
-      "Participated in hackathons to build apps and improve pair programming skills.",
-      "Assisted classmates with troubleshooting and debugging personal projects.",
-    ],
-  },
+export const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
 ];
-
 // export const tech = [
 //   {
 //     name: "Daniel Perez",
