@@ -47,7 +47,7 @@ export function About() {
     onSwipedLeft: nextImage,
     onSwipedRight: prevImage,
   });
-
+  console.log("test");
   return (
     <div className="h-full">
       <div
