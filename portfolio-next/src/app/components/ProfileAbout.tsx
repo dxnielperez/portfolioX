@@ -10,9 +10,11 @@ import {
 } from "../icons/icons";
 import { DirectMessage, LinksContent, useOnScreen } from ".";
 import { useLinksContext } from "../context/LinksContext";
+import ConfettiExplosion from "react-confetti-blast";
 
 export function ProfileAbout() {
   const { darkMode } = useDarkMode();
+  const [confettiActive, setConfettiActive] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const [showDirectMessage, setShowDirectMessage] = useState(false);
   const { showLinks, toggleLinks } = useLinksContext();
@@ -34,6 +36,18 @@ export function ProfileAbout() {
     setFollowers(newFollowers);
     sessionStorage.setItem("following", JSON.stringify(!following));
     sessionStorage.setItem("followers", JSON.stringify(newFollowers));
+    if (following) {
+      setTimeout(() => setConfettiActive(true), 400);
+    }
+  };
+
+  const getButtonPosition = () => {
+    if (buttonRef.current) {
+      const buttonRect = buttonRef.current.getBoundingClientRect();
+      const offset = 40;
+      return { top: buttonRect.top, left: buttonRect.left + offset };
+    }
+    return { top: 0, left: 0 };
   };
 
   const handleLinksClick = () => {
@@ -82,6 +96,22 @@ export function ProfileAbout() {
             {following ? "Follow" : "Following"}
           </button>
         </div>
+        {confettiActive && (
+          <ConfettiExplosion
+            force={0.05}
+            duration={2200}
+            particleCount={20}
+            zIndex={10}
+            width={200}
+            colors={["#FB904D", "#c084fc", "#F5CF43", "#FB904D"]}
+            onComplete={() => setConfettiActive(false)}
+            style={{
+              position: "absolute",
+              top: getButtonPosition().top,
+              left: getButtonPosition().left,
+            }}
+          />
+        )}
         <div className="px-4">
           <div className="text-2xl font-bold flex items-center gap-2">
             <h3>Daniel Perez</h3>

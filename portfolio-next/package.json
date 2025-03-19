@@ -17,6 +17,7 @@
     "next": "15.1.7",
     "next-sitemap": "^4.2.3",
     "react": "^19.0.0",
+    "react-confetti-blast": "^1.0.2",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "react-swipeable": "^7.0.2",
