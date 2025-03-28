@@ -146,7 +146,7 @@ export const projects: Project[] = [
       "/spin-trade/spin-trade-3.png",
       "/spin-trade/spin-trade-4.png",
     ],
-    title: "Spin Trade Marketplace",
+    title: "Record Marketplace",
     tech: [
       "react",
       "typescript",
@@ -154,7 +154,8 @@ export const projects: Project[] = [
       "node",
       "express",
       "postgresql",
-      "aws",
+      "render",
+      "supabase",
     ],
     code: "https://github.com/dxnielperez/record-marketplace",
     description: [

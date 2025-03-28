@@ -18,10 +18,12 @@ import {
   SiMongodb,
   SiTailwindcss,
   SiTypescript,
+  SiRender,
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { BiLogoPostgresql, BiLogoVisualStudio } from "react-icons/bi";
 import { IoMdGitMerge } from "react-icons/io";
+import { RiSupabaseFill } from "react-icons/ri";
 
 export function Tech() {
   const { darkMode } = useDarkMode();
@@ -94,6 +96,16 @@ export function Tech() {
         {
           name: "MongoDB",
           icon: <SiMongodb className="text-[#47A248] text-6xl md:text-7xl" />,
+        },
+        {
+          name: "Render",
+          icon: <SiRender className="text-black text-6xl md:text-7xl" />,
+        },
+        {
+          name: "Supabase",
+          icon: (
+            <RiSupabaseFill className="text-[#3ECF8E] text-6xl md:text-7xl" />
+          ),
         },
       ],
     },

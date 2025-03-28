@@ -141,7 +141,7 @@ export function Projects() {
                   project.tech.map((item, index) => (
                     <div
                       key={item + index}
-                      className={`rounded-full text-sm  ${darkMode ? "bg-orange/10 text-orange" : "bg-orange/80 text-slate-100"} px-3 py-1`}
+                      className={`rounded-full text-sm  ${darkMode ? "bg-orange/10 text-orange" : "bg-orange/80 text-slate-900"} px-3 py-1`}
                     >
                       {item}
                     </div>
