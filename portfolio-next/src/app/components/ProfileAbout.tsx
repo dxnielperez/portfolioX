@@ -44,8 +44,15 @@ export function ProfileAbout() {
   const getButtonPosition = () => {
     if (buttonRef.current) {
       const buttonRect = buttonRef.current.getBoundingClientRect();
-      const offset = 40;
-      return { top: buttonRect.top, left: buttonRect.left + offset };
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const scrollLeft =
+        window.pageXOffset || document.documentElement.scrollLeft;
+      const buttonWidth = buttonRect.width;
+      return {
+        top: buttonRect.top + scrollTop + buttonRect.height / 2,
+        left: buttonRect.left + scrollLeft + buttonWidth / 2,
+      };
     }
     return { top: 0, left: 0 };
   };
