@@ -141,10 +141,10 @@ export const projects: Project[] = [
     date: "November 22, 2023",
     pfp: "/memoji4.png",
     images: [
-      "/spin-trade/spin-trade-1.png",
-      "/spin-trade/spin-trade-2.png",
-      "/spin-trade/spin-trade-3.png",
-      "/spin-trade/spin-trade-4.png",
+      "/spin-trade/record-marketplace-1.png",
+      "/spin-trade/record-marketplace-2.png",
+      "/spin-trade/record-marketplace-3.png",
+      "/spin-trade/record-marketplace-4.png",
     ],
     title: "Record Marketplace",
     tech: [

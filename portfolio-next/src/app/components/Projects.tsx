@@ -159,7 +159,7 @@ export function Projects() {
                         width={400}
                         height={400}
                         src={image}
-                        className="object-cover cursor-pointer aspect-[2/1] overflow-hidden"
+                        className="object-cover-top cursor-pointer aspect-[2/1] overflow-hidden"
                         alt={`${project.title} project images`}
                         onClick={() => openModal(projectIndex, imageIndex)}
                       />
