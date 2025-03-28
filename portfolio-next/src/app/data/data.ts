@@ -86,7 +86,7 @@ export const education: Education[] = [
 
 export const projects: Project[] = [
   {
-    id: 2,
+    id: 1,
     name: "Daniel Perez",
     username: "dxnieldev",
     date: "February 12, 2024",
@@ -108,6 +108,40 @@ export const projects: Project[] = [
     ],
     retweets: 4,
     favorites: 8,
+  },
+  {
+    id: 2,
+    name: "Daniel Perez",
+    username: "dxnieldev",
+    date: "November 22, 2023",
+    pfp: "/memoji4.png",
+    images: [
+      "/spin-trade/record-marketplace-1.png",
+      "/spin-trade/record-marketplace-2.png",
+      "/spin-trade/record-marketplace-3.png",
+      "/spin-trade/record-marketplace-4.png",
+    ],
+    title: "Record Marketplace",
+    tech: [
+      "react",
+      "typescript",
+      "tailwindcss",
+      "node",
+      "express",
+      "postgresql",
+      "render",
+      "supabase",
+    ],
+    code: "https://github.com/dxnielperez/record-marketplace",
+    link: "https://record-marketplace.vercel.app/",
+    description: [
+      "Developed a full stack web application using React, TypeScript, Tailwind, Node.js, Express, and PostgreSQL.",
+      "Deployed frontend on Vercel, backend on Render, and utilized Supabase for database management.",
+      "Designed and integrated authorization mechanisms to control user access based on roles and permissions.",
+    ],
+
+    retweets: 4,
+    favorites: 6,
   },
   {
     id: 3,
@@ -133,39 +167,6 @@ export const projects: Project[] = [
 
     retweets: 2,
     favorites: 8,
-  },
-  {
-    id: 4,
-    name: "Daniel Perez",
-    username: "dxnieldev",
-    date: "November 22, 2023",
-    pfp: "/memoji4.png",
-    images: [
-      "/spin-trade/record-marketplace-1.png",
-      "/spin-trade/record-marketplace-2.png",
-      "/spin-trade/record-marketplace-3.png",
-      "/spin-trade/record-marketplace-4.png",
-    ],
-    title: "Record Marketplace",
-    tech: [
-      "react",
-      "typescript",
-      "tailwindcss",
-      "node",
-      "express",
-      "postgresql",
-      "render",
-      "supabase",
-    ],
-    code: "https://github.com/dxnielperez/record-marketplace",
-    description: [
-      "Utilized React, TypeScript, Tailwind, Node.js, Express, PostgreSQL and AWS to build a full stack web application.",
-      "Engineered and implemented the application from concept to deployment on AWS Elastic Beanstalk.",
-      "Designed and integrated authorization mechanisms to control user access based on roles and permissions.",
-    ],
-
-    retweets: 4,
-    favorites: 6,
   },
 ];
 

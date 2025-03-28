@@ -20,6 +20,7 @@ export function Projects() {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(-1);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedProject, setSelectedProject] = useState<Project>();
+
   const openModal = (projectIndex: number, imageIndex: number) => {
     setSelectedProject(projects[projectIndex]);
     setSelectedProjectIndex(projectIndex);
@@ -92,9 +93,8 @@ export function Projects() {
                           rel={project.id === 2 ? "" : "noopener noreferrer"}
                           aria-label={`Opens live site for project ${project.name}`}
                         >
-                          {/* <span className="tooltiptext text-xs">Live</span> */}
                           <FaLink
-                            className={`self-center  mt-1   duration-150 ease-in-out ${
+                            className={`self-center mt-1 duration-150 ease-in-out ${
                               darkMode
                                 ? "text-[#97AEC4] hover:text-[#7C9AB6]"
                                 : "text-[#7C9AB6] hover:text-[#6286A7]"
@@ -111,7 +111,6 @@ export function Projects() {
                           rel="noopener noreferrer"
                           aria-label={`Opens link to code for project ${project.name}`}
                         >
-                          {/* <span className="tooltiptext text-xs">Code</span> */}
                           <FaCode
                             className={`self-center mt-[0.15rem] text-lg duration-150 ease-in-out ${
                               darkMode
@@ -130,7 +129,7 @@ export function Projects() {
                     <div key={index} className="mr-2">
                       <div className="ml-3 flex">
                         <div className="pt-1">•</div>
-                        <div className="ml-2 ">{item}</div>
+                        <div className="ml-2">{item}</div>
                       </div>
                     </div>
                   ))}
@@ -141,19 +140,23 @@ export function Projects() {
                   project.tech.map((item, index) => (
                     <div
                       key={item + index}
-                      className={`rounded-full text-sm  ${darkMode ? "bg-orange/10 text-orange" : "bg-orange/80 text-slate-900"} px-3 py-1`}
+                      className={`rounded-full text-sm ${
+                        darkMode
+                          ? "bg-orange/10 text-orange"
+                          : "bg-orange/80 text-slate-900"
+                      } px-3 py-1`}
                     >
                       {item}
                     </div>
                   ))}
               </div>
               <div
-                className={` ${
+                className={`${
                   darkMode ? "" : ""
-                }  rounded-lg mb-6 gap-[3px] overflow-hidden`}
+                } rounded-lg mb-6 gap-[3px] overflow-hidden`}
               >
                 <div className="grid grid-cols-2 w-full gap-1">
-                  {project.images.map((image, imageIndex) => (
+                  {project.images.slice(0, 4).map((image, imageIndex) => (
                     <div key={imageIndex} className="relative">
                       <Image
                         width={400}
@@ -163,6 +166,13 @@ export function Projects() {
                         alt={`${project.title} project images`}
                         onClick={() => openModal(projectIndex, imageIndex)}
                       />
+                      {imageIndex === 3 && project.images.length > 4 && (
+                        <div className="absolute w-1/4 h-1/4 rounded-tl-md right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-50">
+                          <span className="text-white text-sm">
+                            + {project.images.length - 4}
+                          </span>
+                        </div>
+                      )}
                       {window.innerWidth > 640 && (
                         <div
                           className="absolute inset-0 bg-black opacity-0 hover:opacity-35 transition-opacity duration-300 cursor-pointer ease-in-out"
@@ -185,26 +195,25 @@ export function Projects() {
           }}
           className={`fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 ${
             darkMode
-              ? "bg-dark/50  backdrop-blur-md text-light"
+              ? "bg-dark/50 backdrop-blur-md text-light"
               : "bg-light/50 backdrop-blur-md text-dark"
           } px-4`}
         >
           <div className="relative">
             <div>
               <IoMdClose
-                className={`${darkMode ? "hover:bg-[#858585]" : "hover:bg-dark"} p-1 rounded-full z-50 top-3 left-3 fixed duration-300 transition-all ease-in-out bg-opacity-10 hover:bg-opacity-25  cursor-pointer`}
+                className={`${darkMode ? "hover:bg-[#858585]" : "hover:bg-dark"} p-1 rounded-full z-50 top-3 left-3 fixed duration-300 transition-all ease-in-out bg-opacity-10 hover:bg-opacity-25 cursor-pointer`}
                 size={38}
                 onClick={closeModal}
               />
             </div>
             <div className="w-full flex justify-center">
-              {" "}
               <Image
                 width={800}
                 height={800}
                 priority={true}
                 src={projects[selectedProjectIndex].images[selectedImageIndex]}
-                className=" max-w-[420px] sm:max-w-[520px] md:max-w-[620px] lg:max-w-[720px] max-h-[90vh]"
+                className="max-w-[420px] sm:max-w-[520px] md:max-w-[620px] lg:max-w-[720px] max-h-[90vh]"
                 alt={`${selectedProject?.title} project images in modal`}
                 onClick={(e) => e.stopPropagation()}
                 {...swipeHandlers}
