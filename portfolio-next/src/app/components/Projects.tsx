@@ -89,7 +89,7 @@ export function Projects() {
                       {project.link && (
                         <a
                           href={project.link}
-                          target={project.id === 2 ? "_self" : "_blank"}
+                          target={project.id === 1 ? "_self" : "_blank"}
                           rel={project.id === 2 ? "" : "noopener noreferrer"}
                           aria-label={`Opens live site for project ${project.name}`}
                         >
