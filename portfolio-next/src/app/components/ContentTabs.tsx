@@ -1,11 +1,11 @@
 "use client";
-import { useEffect } from "react";
+import { memo, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useDarkMode } from "../context/useDarkMode";
 import { tabs, Tab } from "../data";
 import ErrorPage from "./Error";
 
-export function ContentTabs() {
+const ContentTabs = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
   const { darkMode } = useDarkMode();
@@ -63,4 +63,5 @@ export function ContentTabs() {
       )}
     </div>
   );
-}
+};
+export default memo(ContentTabs);

@@ -1,14 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
 import { MdKeyboardArrowUp } from "react-icons/md";
-import {
-  Nav,
-  Banner,
-  ProfilePic,
-  ProfileAbout,
-  ContentTabs,
-} from "./components";
+import { Nav, Banner, ProfilePic, ProfileAbout } from "./components";
 import { useDarkMode, useLinksContext } from "./context";
+import ContentTabs from "./components/ContentTabs";
 
 export default function Home() {
   const { darkMode } = useDarkMode();
