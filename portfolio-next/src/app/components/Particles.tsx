@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
   type Container,
@@ -13,13 +13,21 @@ import { useDarkMode } from "../context/useDarkMode";
 export default function TsParticles() {
   const [init, setInit] = useState(false);
   const { darkMode } = useDarkMode();
+  const engineInitialized = useRef(false); // Track engine initialization
 
   useEffect(() => {
+    if (engineInitialized.current) return; // Skip if already initialized
+
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => {
       setInit(true);
+      engineInitialized.current = true; // Mark as initialized
     });
+
+    return () => {
+      // Optional: Cleanup if needed
+    };
   }, []);
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
