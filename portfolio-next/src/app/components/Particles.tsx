@@ -13,21 +13,17 @@ import { useDarkMode } from "../context/useDarkMode";
 export default function TsParticles() {
   const [init, setInit] = useState(false);
   const { darkMode } = useDarkMode();
-  const engineInitialized = useRef(false); // Track engine initialization
+  const engineInitialized = useRef(false);
 
   useEffect(() => {
-    if (engineInitialized.current) return; // Skip if already initialized
+    if (engineInitialized.current) return;
 
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => {
       setInit(true);
-      engineInitialized.current = true; // Mark as initialized
+      engineInitialized.current = true;
     });
-
-    return () => {
-      // Optional: Cleanup if needed
-    };
   }, []);
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
