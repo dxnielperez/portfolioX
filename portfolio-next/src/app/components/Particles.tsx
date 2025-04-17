@@ -16,18 +16,13 @@ export default function TsParticles() {
   const engineInitialized = useRef(false);
 
   useEffect(() => {
-    // Check if particles have already been initialized in this session
-    const isInitialized = sessionStorage.getItem("tsParticlesInitialized");
-
-    if (isInitialized || engineInitialized.current) return;
+    if (engineInitialized.current) return;
 
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => {
       setInit(true);
       engineInitialized.current = true;
-      // Set flag in session storage to prevent re-initialization
-      sessionStorage.setItem("tsParticlesInitialized", "true");
     });
   }, []);
 
