@@ -18,9 +18,12 @@ const calculateDuration = (
   const years = Math.floor(months / 12);
   const remainingMonths = months % 12;
 
-  return years > 0
-    ? `${years} yr ${remainingMonths} mos`
-    : `${remainingMonths} mos`;
+  if (years > 0) {
+    return remainingMonths === 0
+      ? `${years} yr`
+      : `${years} yr ${remainingMonths} mos`;
+  }
+  return `${remainingMonths} mos`;
 };
 
 export function Experience() {
