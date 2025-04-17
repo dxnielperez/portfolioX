@@ -10,26 +10,22 @@ export function ContentTabs() {
   const router = useRouter();
   const { darkMode } = useDarkMode();
 
-  // Ensure URL includes ?tab=about unless another tab is present
   useEffect(() => {
     if (!searchParams.get("tab")) {
       router.replace("/?tab=about", { scroll: false });
     }
   }, [searchParams, router]);
 
-  // Get tab from query param or default to "about"
   const activeTab = searchParams.get("tab") || "about";
 
   const isValidTab = tabs.some((tab) => tab.id === activeTab);
 
-  // Handle tab change & update URL
   const handleTabClick = (tabId: string) => {
-    router.push(`/?tab=${tabId}`, { scroll: false });
+    router.replace(`/?tab=${tabId}`, { scroll: false });
   };
 
   return (
     <div>
-      {/* Tab Navigation */}
       <div className="grid grid-cols-4 mt-5 gap-4 mx-2">
         {tabs.map((tab: Tab) => (
           <div
