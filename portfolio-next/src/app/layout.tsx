@@ -3,9 +3,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { DarkModeProvider, LinksProvider } from "./context";
 import { Footer } from "./components/Footer";
-import TsParticles from "./components/Particles";
+// import TsParticles from "./components/Particles";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
+import PersistentParticles from "./components/PersistentParticles";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -83,7 +84,7 @@ export default function RootLayout({
             {children}
             <Analytics />
             <Footer />
-            <TsParticles />
+            <PersistentParticles />
           </LinksProvider>
         </DarkModeProvider>
       </body>
