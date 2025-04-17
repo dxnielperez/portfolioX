@@ -83,8 +83,8 @@ export default function RootLayout({
             {children}
             <Analytics />
             <Footer />
-            <TsParticles />
           </LinksProvider>
+          <TsParticles />
         </DarkModeProvider>
       </body>
     </html>
