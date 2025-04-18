@@ -1,17 +1,26 @@
 "use client";
-import { memo, useState } from "react";
+import { useEffect, memo } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 import { useDarkMode } from "../context/useDarkMode";
 import { tabs, Tab } from "../data";
 import ErrorPage from "./Error";
 
-const ContentTabs = () => {
+function ContentTabs() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
   const { darkMode } = useDarkMode();
-  const [activeTab, setActiveTab] = useState("about");
 
+  useEffect(() => {
+    if (!searchParams.get("tab")) {
+      router.push("/?tab=about", { scroll: false });
+    }
+  }, [searchParams, router]);
+
+  const activeTab = searchParams.get("tab") || "about";
   const isValidTab = tabs.some((tab) => tab.id === activeTab);
 
   const handleTabClick = (tabId: string) => {
-    setActiveTab(tabId);
+    router.push(`/?tab=${tabId}`, { scroll: false });
   };
 
   return (
@@ -53,6 +62,6 @@ const ContentTabs = () => {
       )}
     </div>
   );
-};
+}
 
 export default memo(ContentTabs);
