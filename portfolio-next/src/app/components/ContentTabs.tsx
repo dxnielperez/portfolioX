@@ -1,26 +1,26 @@
 "use client";
-import { useEffect, memo } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import { useDarkMode } from "../context/useDarkMode";
 import { tabs, Tab } from "../data";
 import ErrorPage from "./Error";
 
-function ContentTabs() {
-  const searchParams = useSearchParams();
-  const router = useRouter();
+const ContentTabs = () => {
   const { darkMode } = useDarkMode();
+  const [activeTab, setActiveTab] = useState("about");
 
   useEffect(() => {
-    if (!searchParams.get("tab")) {
-      router.push("/?tab=about", { scroll: false });
-    }
-  }, [searchParams, router]);
+    const params = new URLSearchParams(window.location.search);
+    const tabParam = params.get("tab") || "about";
+    setActiveTab(tabParam);
+  }, []);
 
-  const activeTab = searchParams.get("tab") || "about";
   const isValidTab = tabs.some((tab) => tab.id === activeTab);
 
   const handleTabClick = (tabId: string) => {
-    router.push(`/?tab=${tabId}`, { scroll: false });
+    const url = new URL(window.location.href);
+    url.searchParams.set("tab", tabId);
+    window.history.pushState({}, "", url.toString());
+    setActiveTab(tabId);
   };
 
   return (
@@ -45,9 +45,7 @@ function ContentTabs() {
         ))}
       </div>
 
-      <div>
-        <hr className="text-white my-2 mx-1 md:mx-0" />
-      </div>
+      <hr className="text-white my-2 mx-1 md:mx-0" />
 
       {isValidTab ? (
         tabs.map((tab: Tab) => (
@@ -62,6 +60,6 @@ function ContentTabs() {
       )}
     </div>
   );
-}
+};
 
-export default memo(ContentTabs);
+export default ContentTabs;
