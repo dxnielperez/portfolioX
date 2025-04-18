@@ -4,14 +4,34 @@ import { useDarkMode } from "../context/useDarkMode";
 import { tabs, Tab } from "../data";
 import ErrorPage from "./Error";
 
+const DEFAULT_TAB = "about";
+
 const ContentTabs = () => {
   const { darkMode } = useDarkMode();
-  const [activeTab, setActiveTab] = useState("about");
+  const [activeTab, setActiveTab] = useState(DEFAULT_TAB);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const tabParam = params.get("tab") || "about";
+    const tabParam = params.get("tab") || DEFAULT_TAB;
+
+    if (!params.get("tab")) {
+      const url = new URL(window.location.href);
+      url.searchParams.set("tab", DEFAULT_TAB);
+      window.history.replaceState({}, "", url.toString());
+    }
+
     setActiveTab(tabParam);
+  }, []);
+
+  useEffect(() => {
+    const handlePopState = () => {
+      const params = new URLSearchParams(window.location.search);
+      const tabParam = params.get("tab") || DEFAULT_TAB;
+      setActiveTab(tabParam);
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
   const isValidTab = tabs.some((tab) => tab.id === activeTab);
