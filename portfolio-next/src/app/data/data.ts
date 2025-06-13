@@ -17,10 +17,10 @@ export const experiences: Experiences[] = [
     name: "Daniel Perez",
     username: "dxnieldev",
     role: "Associate Software Engineer",
-    company: "The Daily Wire - Full Time",
+    company: "Bentkey Ventures LLC - Full Time",
     start: { month: 5, year: 2024 },
     location: "Remote",
-    logo: "/dw-logo.jpg",
+    logo: "/bentkey-logo.png",
     description: [
       "Collaborated with cross-functional teams to develop a dynamic, data-driven web application using modern front-end technologies.",
       "Built and enhanced user interfaces for internal tools, ensuring seamless integration with backend services and APIs.",
@@ -85,6 +85,24 @@ export const education: Education[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    id: 0,
+    name: "Daniel Perez",
+    username: "dxnieldev",
+    date: "May 12, 2025",
+    pfp: "/memoji4.png",
+    images: [""],
+    title: "MMA Web Scraper API",
+    tech: ["nodeJS", "expressJS", "cherio", "axios", "railway"],
+    code: "https://github.com/dxnielperez/mma-events-api",
+    description: [
+      "Created a Node.js and Express-based web scraper to fetch and structure real-time MMA event data from tapology.com.",
+      "Used Axios to retrieve HTML and Cheerio to parse and extract relevant data from the DOM.",
+      "Deployed on Railway to provide a live, lightweight API endpoint for MMA event data retrieval.",
+    ],
+    retweets: 4,
+    favorites: 8,
+  },
   {
     id: 1,
     name: "Daniel Perez",
