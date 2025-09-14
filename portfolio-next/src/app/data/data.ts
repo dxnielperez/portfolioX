@@ -225,7 +225,7 @@ export const links: Links[] = [
   {
     id: 4,
     name: "Resume",
-    url: "daniel-perez-resume-25.pdf",
+    url: "daniel-perez-resume-portfolio.pdf",
     icon: BsFillSuitcaseLgFill,
     copy: "",
   },
