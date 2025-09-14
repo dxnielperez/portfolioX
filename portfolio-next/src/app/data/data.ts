@@ -17,10 +17,10 @@ export const experiences: Experiences[] = [
     name: "Daniel Perez",
     username: "dxnieldev",
     role: "Associate Software Engineer",
-    company: "Bentkey Ventures LLC - Full Time",
+    company: "The Daily Wire - Full Time",
     start: { month: 5, year: 2024 },
     location: "Remote",
-    logo: "/bentkey-logo.png",
+    logo: "/dw-logo.jpg",
     description: [
       "Collaborated with cross-functional teams to develop a dynamic, data-driven web application using modern front-end technologies.",
       "Built and enhanced user interfaces for internal tools, ensuring seamless integration with backend services and APIs.",
