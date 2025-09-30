@@ -19,7 +19,7 @@ export function Footer() {
       >
         <a
           aria-label="Links to Daniel Perez linkedin"
-          href="https://www.linkedin.com/in/daniel-f-perez/"
+          href="https://www.linkedin.com/in/daniel-perez-f/"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:scale-110 duration-300 ease-in-out cursor-pointer z-[9]"
