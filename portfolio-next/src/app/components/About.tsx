@@ -10,7 +10,7 @@ export function About() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  const images = ["/me.png", "/c-0823.jpg"];
+  const images = ["/pfp-updated-1.jpg", "/c-0823.jpg"];
 
   const openModal = (image: string) => {
     const index = images.indexOf(image);
