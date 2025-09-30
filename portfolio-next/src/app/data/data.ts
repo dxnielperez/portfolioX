@@ -204,9 +204,9 @@ export const links: Links[] = [
   {
     id: 1,
     name: "Linkedin",
-    url: "https://www.linkedin.com/in/daniel-f-perez/",
+    url: "https://www.linkedin.com/in/daniel-perez-f/",
     icon: FaLinkedin,
-    copy: "https://www.linkedin.com/in/daniel-f-perez/",
+    copy: "https://www.linkedin.com/in/daniel-perez-f/",
   },
   {
     id: 2,
